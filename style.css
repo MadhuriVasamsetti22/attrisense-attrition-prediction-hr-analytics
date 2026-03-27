@@ -1,0 +1,181 @@
+/* ===== GENERAL PAGE ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #1f2a44;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #00c6ff;
+}
+
+.navbar button {
+    background: #00a8e8;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    width: 60%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2 {
+    color: #1f2a44;
+}
+
+/* ===== BUTTONS ===== */
+button, input[type="submit"] {
+    background: #1f2a44;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #00a8e8;
+}
+
+/* ===== FORMS ===== */
+form {
+    margin-top: 20px;
+}
+
+input {
+    padding: 8px;
+    width: 60%;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ===== TABLES ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background: #1f2a44;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* ===== LOGIN BOX ===== */
+.login-box {
+    width: 350px;
+    margin: 120px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* ===== DARK THEME ===== */
+.dark {
+    background-color: #121212;
+    color: white;
+}
+
+/* Navbar */
+.dark .navbar {
+    background-color: #000000;
+}
+
+/* Container */
+.dark .container {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Headings */
+.dark h1, 
+.dark h2 {
+    color: #ffffff;
+}
+
+/* Inputs */
+.dark input {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Buttons */
+.dark button,
+.dark input[type="submit"] {
+    background-color: #333;
+    color: white;
+}
+
+/* Tables */
+.dark table {
+    color: white;
+}
+
+.dark table tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+.dark table th {
+    background-color: #000;
+}
+
+/* Login Box */
+.dark .login-box {
+    background-color: #1e1e1e;
+    color: white;
+}
