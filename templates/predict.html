@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/add">Add Employee</a>
+    <a href="/employees">Employees</a>
+    <a href="/predict">Predict</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/report">Download Report</a>
+    <a href="/logout">Logout</a>
+    <button onclick="toggleTheme()">🌙</button>
+</div>
+
+<div class="container">
+    <h2>Predict Employee Attrition</h2>
+
+    <form method="POST">
+        Age: <input type="number" name="age"><br><br>
+        Salary: <input type="number" name="salary"><br><br>
+        Experience: <input type="number" name="experience"><br><br>
+        Performance: <input type="number" name="performance"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>{{ prediction }}</h3>
+    {% endif %}
+</div>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
