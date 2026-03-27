@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee ML System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/add">Add Employee</a>
+    <a href="/employees">Employees</a>
+    <a href="/predict">Predict</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/report">Report</a>
+    <a href="/logout">Logout</a>
+    <button onclick="toggleTheme()">🌙</button>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+    <h1>Employee Management ML System</h1>
+
+    <a href="/add"><button>Add Employee</button></a>
+    <a href="/employees"><button>View Employees</button></a>
+    <a href="/train"><button>Train Model</button></a>
+    <a href="/predict"><button>Predict</button></a>
+    <a href="/dashboard"><button>Dashboard</button></a>
+</div>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
