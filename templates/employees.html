@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/add">Add Employee</a>
+    <a href="/employees">Employees</a>
+    <a href="/predict">Predict</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/report">Download Report</a>
+    <a href="/login">Login</a>
+    <a href="/logout">Logout</a>
+    <button onclick="toggleTheme()">🌙</button>
+</div>
+<form method="GET" action="/employees">
+    <input type="text" name="search" placeholder="Search by name">
+    <button type="submit">Search</button>
+</form>
+<div class="container">
+<h2>Employees List</h2>
+
+<table>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Age</th>
+<th>Department</th>
+<th>Salary</th>
+<th>Experience</th>
+<th>Performance</th>
+<th>Attrition</th>
+<th>Delete</th>
+<th>Update</th>
+</tr>
+
+{% for emp in employees %}
+<tr>
+<td>{{emp[0]}}</td>
+<td>{{emp[1]}}</td>
+<td>{{emp[2]}}</td>
+<td>{{emp[3]}}</td>
+<td>{{emp[4]}}</td>
+<td>{{emp[5]}}</td>
+<td>{{emp[6]}}</td>
+<td>{{emp[7]}}</td>
+
+<td><a href="/delete/{{emp[0]}}"><button>Delete</button></a></td>
+<td><a href="/update/{{emp[0]}}"><button>Update</button></a></td>
+
+</tr>
+{% endfor %}
+
+</table>
+</div>
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+</script>
+</body>
+</html>
